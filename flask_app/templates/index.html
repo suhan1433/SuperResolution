@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <title>Image Upload and Processing</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Upload an Image</h1>
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <input type="file" name="image" accept="image/*" required>
+            <button type="submit">Upload</button>
+        </form>
+
+        {% if uploaded_image %}
+        <div class="image-container">
+            <h2>Uploaded Image</h2>
+            <img src="/image/{{ uploaded_image }}" alt="Uploaded Image">
+        </div>
+        {% endif %}
+
+        {% if result_image %}
+        <div class="image-container">
+            <h2>Result Image</h2>
+            <img src="/result/{{ result_image }}" alt="Result Image">
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
