@@ -1,16 +1,6 @@
 version: '3.8'
 
 services:
-  nginx:
-    image: suhan123/nginx:v1.0
-    ports:
-      - "8099:80"
-    networks:
-      - app_network
-    depends_on:
-      - web
-      - onnx
-
   web:
     image: suhan123/super_resolution:v1.0
     deploy:
@@ -48,7 +38,7 @@ services:
       - app_network 
 
   proxy-web:
-    image: nginx:1.21.5-alpine
+    image: suhan123/nginx:v1.0
     container_name: rolling-server-web
     restart: always
     depends_on:
@@ -61,7 +51,7 @@ services:
      - app_network
 
   proxy-onnx:
-   image: nginx:1.21.5-alpine
+   image: suhan123/nginx:v1.0
    container_name: rolling-onnx-lb
    restart: always
    ports:
