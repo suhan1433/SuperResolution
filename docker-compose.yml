@@ -67,7 +67,7 @@ services:
    ports:
     - '6000:80'
    volumes:
-    - ${PWD}/nginx/nginx_onnx.conf:/etc/nginx/nginx.conf
+    - ${PWD}/nginx/nginx_onnx.conf:/etc/nginx/conf.d
    networks:
     - app_network
  
