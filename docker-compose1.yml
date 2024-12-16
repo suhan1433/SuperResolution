@@ -2,7 +2,9 @@ version: '3.8'
 
 services:
   nginx:
-    image: suhan123/nginx:v1.0
+    build:
+      context: ./nginx
+    container_name: nginx_server
     ports:
       - "8090:80"
     networks:
@@ -12,7 +14,8 @@ services:
       - onnx
 
   web:
-    image: suhan123/super_resolution:v1.0
+    build:
+      context: ./flask_app
     deploy:
       replicas: 3
     ports:
@@ -24,7 +27,8 @@ services:
       - app_network 
 
   onnx:
-    image: suhan123/onnx_server:v1.0
+    build:
+      context: ./onnx_server
     deploy:
       replicas: 3
     ports:
