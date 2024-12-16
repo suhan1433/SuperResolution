@@ -44,7 +44,7 @@ services:
     depends_on:
      - web
     ports:
-     - '80:80'
+     - '81:80'
     volumes:
      - ${PWD}/nginx/nginx.conf:/etc/nginx/conf.d
     networks:
