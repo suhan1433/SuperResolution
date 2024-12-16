@@ -4,7 +4,7 @@ services:
   nginx:
     image: suhan123/nginx:v1.0
     ports:
-      - "8090:80"
+      - "8099:80"
     networks:
       - app_network
     depends_on:
