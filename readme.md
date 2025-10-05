@@ -1,6 +1,6 @@
 # SuperResolution Project
 
-![image.png](image.png)
+<img width="2242" height="1078" alt="image" src="https://github.com/user-attachments/assets/3a05cb62-a6a7-40e3-ab44-8e16bc50e840" />
 
 **목표** : 
 
@@ -30,6 +30,7 @@
 
 결과: 
 
-![image.png](image%201.png)
+<img width="1014" height="606" alt="image" src="https://github.com/user-attachments/assets/675abeb2-c25d-48c8-aeeb-19b62ab98d4c" />
 
-![image.png](image%202.png)
+<img width="1020" height="1542" alt="image" src="https://github.com/user-attachments/assets/786d195c-e73b-49a4-9cb9-406bfe310017" />
+
